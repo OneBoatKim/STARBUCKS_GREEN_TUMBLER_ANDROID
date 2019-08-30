@@ -204,15 +204,15 @@ public class Personal_menu extends AppCompatActivity {
         arr2.add(new Menu_data("4800", R.mipmap.vanilla_cream_fr,"11"));
 
         arr3.add(new Menu_data("6100",R.mipmap.decaf_affogato_bl,"12"));
-        arr3.add(new Menu_data("7200",R.mipmap.jeju_walnut_bl,"14"));
         arr3.add(new Menu_data("6300", R.mipmap.mango_banana_bl,"16"));
-        arr3.add(new Menu_data("5000", R.mipmap.mango_passion_bl,"13"));
+        arr3.add(new Menu_data("7200",R.mipmap.jeju_walnut_bl,"14"));
         arr3.add(new Menu_data("6100", R.mipmap.strawberry_yogurt_bl,"15"));
+        arr3.add(new Menu_data("5000", R.mipmap.mango_passion_bl,"13"));
 
         arr4.add(new Menu_data("5400",R.mipmap.black_tea_lemon_fz,"17"));
         arr4.add(new Menu_data("5900",R.mipmap.cool_lime_fz,"18"));
-        arr4.add(new Menu_data("5400", R.mipmap.passion_tango_fz,"20"));
         arr4.add(new Menu_data("6300", R.mipmap.pink_grapefruit_fz,"19"));
+        arr4.add(new Menu_data("5400", R.mipmap.passion_tango_fz,"20"));
 
         arr5.add(new Menu_data("5600",R.mipmap.byuldabang_tea,"22"));
         arr5.add(new Menu_data("7500",R.mipmap.grandma_apple_tea,"24"));

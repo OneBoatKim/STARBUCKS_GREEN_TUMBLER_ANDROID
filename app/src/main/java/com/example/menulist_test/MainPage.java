@@ -30,9 +30,11 @@ public class MainPage extends AppCompatActivity {
         MyApplication myApplication = (MyApplication)getApplication();
         myApplication.setServerUrl("52.68.20.62"); //10.149.179.91:8088 희재 서버 // 52.68.20.62 실제 서버
         myApplication.setAccountId("hanbe");
+        String a;
 
         try {
             String token = FirebaseInstanceId.getInstance().getToken();
+            System.out.println(token);
             Log.d("IDService","device token : "+token);
         } catch (NullPointerException e) {
             e.printStackTrace();

@@ -9,59 +9,74 @@
 
     <Button
         android:id="@+id/main_btn_to_personal"
-        android:layout_width="130dp"
-        android:layout_height="169dp"
-        android:layout_marginStart="268dp"
-        android:layout_marginTop="397dp"
+        android:layout_width="157dp"
+        android:layout_height="194dp"
         android:background="#00FFFFFF"
         android:onClick="go_to_personal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/main_btn_to_tumbler"
-        android:layout_width="179dp"
-        android:layout_height="225dp"
-        android:layout_marginStart="213dp"
-        android:layout_marginTop="124dp"
-        android:layout_marginEnd="19dp"
-        android:background="#00FFFFFF"
-        android:onClick="go_to_tumbler"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.769" />
 
     <TextView
         android:id="@+id/main_txt_nickname"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="286dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.417" />
 
     <TextView
         android:id="@+id/main_txt_star_cnt"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="270dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.215"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39" />
 
     <TextView
         android:id="@+id/main_txt_tumbler_money"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="242dp"
-        android:layout_marginEnd="22dp"
+        android:text="10000원"
         android:textAlignment="center"
-        android:textColor="#D1D1D1"
+        android:textColor="#FFFFFF"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.923"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.384" />
+
+    <Button
+        android:id="@+id/main_btn_to_tumbler"
+        android:layout_width="184dp"
+        android:layout_height="184dp"
+        android:background="#00FFFFFF"
+        android:onClick="go_to_tumbler"
+        android:textColor="#9F9F9F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.969"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.266" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
