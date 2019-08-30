@@ -24,7 +24,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".TumblerReceiptActivity"></activity>
+        <activity android:name=".Tumbler_receipt"></activity>
         <activity android:name=".Tumbler_newTumbler" />
         <activity android:name=".Tumbler_alarm_receipt" />
         <activity android:name=".Tumbler_alarm" />
