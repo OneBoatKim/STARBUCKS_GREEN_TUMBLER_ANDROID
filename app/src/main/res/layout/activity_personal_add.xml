@@ -18,7 +18,7 @@
             android:layout_width="187dp"
             android:layout_height="50dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="320dp"
+            android:layout_marginTop="244dp"
             android:layout_marginEnd="8dp"
             android:background="#00000000"
             android:onClick="go_register_layout"
@@ -32,12 +32,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="68dp"
             android:layout_marginEnd="16dp"
             android:background="#B69797"
             android:onClick="drizzle_checked"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.92"
+            app:layout_constraintHorizontal_bias="0.921"
             app:layout_constraintStart_toEndOf="@+id/p_add_text_drizzle"
             app:layout_constraintTop_toBottomOf="@+id/whip_checkBox" />
 
@@ -46,7 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="68dp"
             android:layout_marginEnd="16dp"
             android:background="#B69797"
             android:onClick="whip_checked"
@@ -60,7 +60,7 @@
             android:layout_width="69dp"
             android:layout_height="29dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="60dp"
             android:layout_marginEnd="8dp"
             android:background="#000000"
             app:layout_constraintEnd_toEndOf="parent"
@@ -73,11 +73,11 @@
             android:layout_width="69dp"
             android:layout_height="29dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="76dp"
+            android:layout_marginTop="100dp"
             android:layout_marginEnd="8dp"
             android:background="#000000"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.97"
+            app:layout_constraintHorizontal_bias="0.971"
             app:layout_constraintStart_toEndOf="@+id/p_add_text_shot"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -94,8 +94,8 @@
             android:id="@+id/p_add_text_drizzle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="80dp"
             android:text="드리즐"
             android:textColor="#000000"
             app:layout_constraintStart_toStartOf="parent"
@@ -116,8 +116,8 @@
             android:id="@+id/p_add_text_syrub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="68dp"
             android:text="시럽"
             android:textColor="#000000"
             app:layout_constraintStart_toStartOf="parent"
@@ -127,8 +127,8 @@
             android:id="@+id/p_add_text_shot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="64dp"
             android:text="샷"
             android:textColor="#000000"
             app:layout_constraintStart_toStartOf="parent"
@@ -140,29 +140,35 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@mipmap/menu_setting"
-        android:visibility="visible">
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/p_add_btn_adddata"
             android:layout_width="379dp"
             android:layout_height="46dp"
-            android:layout_marginBottom="72dp"
+            android:layout_marginBottom="232dp"
             android:background="#00FFFFFF"
             android:onClick="p_add_data_to_db"
-            app:layout_constraintBottom_toBottomOf="@+id/p_add_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/p_add_btn_size"
             android:layout_width="379dp"
             android:layout_height="50dp"
-            android:layout_marginTop="148dp"
             android:background="#00FFFFFF"
             android:onClick="select_size"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.437"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/p_add_bg" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/p_add_name"
@@ -181,25 +187,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="168dp"
             android:layout_marginEnd="8dp"
             android:text="Tall"
             android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.852"
+            app:layout_constraintHorizontal_bias="0.83"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/p_add_bg" />
-
-        <ImageView
-            android:id="@+id/p_add_bg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:src="@mipmap/personal_add_bg"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/p_add_menu" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/p_add_id"

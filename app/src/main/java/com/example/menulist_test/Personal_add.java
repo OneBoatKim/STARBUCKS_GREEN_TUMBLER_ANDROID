@@ -168,10 +168,13 @@ public class Personal_add extends AppCompatActivity {
 
                 if(i == 0){
                     p_data.setSize("T");
+                    size_text.setText("Tall");
                 }else if(i == 1){
                     p_data.setSize("G");
+                    size_text.setText("Grande");
                 }else{
                     p_data.setSize("V");
+                    size_text.setText("Venti");
                 }
 
             }

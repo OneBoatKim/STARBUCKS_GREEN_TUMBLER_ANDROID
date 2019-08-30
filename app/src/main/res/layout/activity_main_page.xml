@@ -33,29 +33,35 @@
 
     <TextView
         android:id="@+id/main_txt_nickname"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="248dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="286dp"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/main_txt_star_cnt"
-        android:layout_width="0dp"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="232dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="270dp"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/main_txt_tumbler_money"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="240dp"
-        android:layout_marginEnd="52dp"
-        android:textColor="#FFFFFF"
+        android:layout_marginTop="242dp"
+        android:layout_marginEnd="22dp"
+        android:textAlignment="center"
+        android:textColor="#D1D1D1"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
