@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/tumbler_main_bg"
+    tools:context=".Tumbler_main">
+
+    <Button
+        android:id="@+id/tumbler_main_btn_money_add"
+        android:layout_width="189dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="#00FFFFFF"
+        android:onClick="go_to_addmoney"
+        app:layout_constraintBottom_toTopOf="@+id/tumbler_main_btn_nfc"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/tumbler_main_btn_lost"
+        android:layout_width="183dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="20dp"
+        android:background="#00FFFFFF"
+        android:onClick="go_to_lost"
+        app:layout_constraintBottom_toTopOf="@+id/tumbler_main_btn_nfc"
+        app:layout_constraintStart_toEndOf="@+id/tumbler_main_btn_money_add" />
+
+    <Button
+        android:id="@+id/tumbler_main_btn_greenseed"
+        android:layout_width="73dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="16dp"
+        android:background="#00FFFFFF"
+        android:onClick="go_to_grennseed_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tumbler_main_btn_nfc"
+        android:layout_width="359dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
+        android:background="#00FFFFFF"
+        android:onClick="go_to_nfc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/tumbler_main_btn_go_back"
+        android:layout_width="69dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="8dp"
+        android:background="#00FFFFFF"
+        android:onClick="go_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/tumbler_main_image"
+        android:layout_width="273dp"
+        android:layout_height="293dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.565"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_info" />
+
+    <TextView
+        android:id="@+id/tumble_main_txt_tname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:textColor="#020000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tumbler_main_image" />
+
+    <TextView
+        android:id="@+id/tumbler_main_txt_tmoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tumble_main_txt_tname" />
+
+    <Button
+        android:id="@+id/tumbler_main_btn_go_personal"
+        android:layout_width="179dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="8dp"
+        android:background="#00FFFFFF"
+        android:onClick="go_to_personal"
+        android:textColor="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/tumbler_main_btn_money_add"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/tumbler_main_btn_go_alarm"
+        android:layout_width="180dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#00FFFFFF"
+        android:onClick="go_to_alarm"
+        app:layout_constraintBottom_toTopOf="@+id/tumbler_main_btn_lost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tumbler_main_btn_go_personal" />
+
+    <Button
+        android:id="@+id/tumbler_main_btn_go_to_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:onClick="go_to_new"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/tumbler_main_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#F7EE0D0D"
+        android:buttonTint="#F7790A81"
+        android:foregroundTint="#DF1313"
+        android:text="결제 기능"
+        android:textColor="#FD000000"
+        android:thumbTint="#1F7A3C"
+        android:track="@mipmap/charge_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tumbler_main_btn_go_back" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/tumbler_addmoney_bg"
+    tools:context=".Tumbler_addmoney">
+
+    <ImageView
+        android:id="@+id/tumbler_addmoney_image"
+        android:layout_width="107dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="68dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/tumbler_addmoney_txt_tumbler_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:text="텀블러 이름"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.192"
+        app:layout_constraintStart_toEndOf="@+id/tumbler_addmoney_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tumbler_addmoney_txt_tumbler_money_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="48dp"
+        android:text="1"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@+id/tumbler_addmoney_image"
+        app:layout_constraintTop_toBottomOf="@+id/tumbler_addmoney_txt_tumbler_name" />
+
+    <TextView
+        android:id="@+id/tumbler_addmoney_txt_tumbler_money_after"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:text="텀블러 충전 후 금액"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/tumbler_addmoney_btn_charge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.915"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/tumbler_addmoney_btn_charge"
+        android:layout_width="381dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="44dp"
+        android:background="#00FFFFFF"
+        android:onClick="charge_money"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/tumbler_addmoney_btn_1won"
+        android:layout_width="120dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="72dp"
+        android:onClick="click_1won"
+        android:text="1만원"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tumbler_addmoney_image" />
+
+    <Button
+        android:id="@+id/tumbler_addmoney_btn_3won"
+        android:layout_width="114dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="84dp"
+        android:onClick="click_3won"
+        android:text="3만원"
+        app:layout_constraintStart_toEndOf="@+id/tumbler_addmoney_btn_1won"
+        app:layout_constraintTop_toBottomOf="@+id/tumbler_addmoney_txt_tumbler_money_now" />
+
+    <Button
+        android:id="@+id/tumbler_addmoney_btn_5won"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="click_5won"
+        android:text="5만원"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toEndOf="@+id/tumbler_addmoney_btn_3won"
+        app:layout_constraintTop_toBottomOf="@+id/tumbler_addmoney_txt_tumbler_money_now" />
+
+    <Button
+        android:id="@+id/tumbler_addmoney_btn_7won"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:onClick="click_7won"
+        android:text="7만원"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tumbler_addmoney_btn_1won" />
+
+    <Button
+        android:id="@+id/tumbler_addmoney_btn_10won"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:onClick="click_10won"
+        android:text="10만원"
+        app:layout_constraintStart_toEndOf="@+id/tumbler_addmoney_btn_7won"
+        app:layout_constraintTop_toBottomOf="@+id/tumbler_addmoney_btn_3won" />
+
+    <Button
+        android:id="@+id/tumbler_addmoney_btn_20won"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:onClick="click_20won"
+        android:text="20만원"
+        app:layout_constraintStart_toEndOf="@+id/tumbler_addmoney_btn_10won"
+        app:layout_constraintTop_toBottomOf="@+id/tumbler_addmoney_btn_5won" />
+
+    <Button
+        android:id="@+id/tumbler_addmoney_btn_go_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:onClick="go_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
