@@ -29,7 +29,7 @@ public class MainPage extends AppCompatActivity {
 
         MyApplication myApplication = (MyApplication)getApplication();
         myApplication.setServerUrl("52.68.20.62"); //10.149.179.91:8088 희재 서버 // 52.68.20.62 실제 서버
-        myApplication.setAccountId("heejae");
+        myApplication.setAccountId("hanbe"); // hanbe, hojun, sanghyun, heejae, enkyoung
 
         try {
             String token = FirebaseInstanceId.getInstance().getToken();
