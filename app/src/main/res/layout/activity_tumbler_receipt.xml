@@ -4,38 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Tumbler_receipt"
-    android:background="#ffffff">
+    android:background="#ffffff"
+    tools:context=".Tumbler_receipt">
 
     <ImageView
         android:id="@+id/receipt_top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/tumbler_receipt_top"
+        android:layout_marginTop="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/tumbler_receipt_top" />
 
     <Button
         android:id="@+id/push_back"
         android:layout_width="50dp"
         android:layout_height="40dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="8dp"
         android:background="#00FFFFFF"
         android:onClick="go_back"
         android:text="Back"
         android:textColor="#000000"
-        app:layout_constraintLeft_toLeftOf="@id/linearLayout1"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="65dp"
         android:orientation="vertical"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/receipt_top"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginRight="65dp"
-        android:layout_marginLeft="60dp">
+        app:layout_constraintTop_toBottomOf="@id/receipt_top">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -50,7 +53,7 @@
                 android:layout_weight="4"
                 android:text="남산스테이트점"
                 android:textAlignment="textStart"
-                android:textColor="#000000"/>
+                android:textColor="#000000" />
 
             <TextView
                 android:id="@+id/order_time"
@@ -58,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="6"
                 android:textAlignment="textEnd"
-                android:textColor="#000000"/>
+                android:textColor="#000000" />
 
         </LinearLayout>
     </LinearLayout>
@@ -67,59 +70,59 @@
         android:id="@+id/receipt_mid1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/tumbler_receipt_middle"
+        android:layout_marginTop="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearLayout1"
-        android:layout_marginTop="10dp"/>
+        app:srcCompat="@mipmap/tumbler_receipt_middle" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="65dp"
         android:orientation="vertical"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/receipt_mid1"
-        android:layout_marginRight="65dp"
-        android:layout_marginLeft="60dp">
+        app:layout_constraintTop_toBottomOf="@id/receipt_mid1">
 
         <TextView
-            android:id="@+id/account_id"
+            android:id="@+id/nickname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:textColor="#000000"
             android:textSize="30dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
     </LinearLayout>
 
     <ImageView
         android:id="@+id/receipt_mid2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/tumbler_receipt_middle"
+        android:layout_marginTop="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearLayout2"
-        android:layout_marginTop="10dp"/>
+        app:srcCompat="@mipmap/tumbler_receipt_middle" />
 
     <!--메뉴별 금액(리스트뷰)-->
     <ListView
         android:id="@+id/menuView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintLeft_toLeftOf="@id/linearLayout2"
-        app:layout_constraintTop_toBottomOf="@id/receipt_mid2"
         android:layout_marginRight="65dp"
-        android:layout_marginLeft="60dp"/>
+        app:layout_constraintLeft_toLeftOf="@id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@id/receipt_mid2" />
 
     <ImageView
         android:id="@+id/receipt_mid3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/tumbler_receipt_middle"
+        android:layout_marginTop="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/menuView"
-        android:layout_marginTop="10dp"/>
+        app:srcCompat="@mipmap/tumbler_receipt_middle" />
 
 
     <!-- 합계 -->
@@ -127,12 +130,12 @@
         android:id="@+id/linearLayout6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="65dp"
         android:orientation="vertical"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="@id/receipt_mid3"
-        android:layout_marginRight="65dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="30dp">
+        app:layout_constraintTop_toTopOf="@id/receipt_mid3">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -144,18 +147,18 @@
                 android:id="@+id/textview1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#000000"
-                android:textAlignment="textStart"
+                android:layout_weight="3"
                 android:text="합계"
-                android:layout_weight="3"/>
+                android:textAlignment="textStart"
+                android:textColor="#000000" />
 
             <TextView
                 android:id="@+id/all_price1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#000000"
+                android:layout_weight="7"
                 android:textAlignment="textEnd"
-                android:layout_weight="7"/>
+                android:textColor="#000000" />
 
         </LinearLayout>
     </LinearLayout>
@@ -164,21 +167,21 @@
         android:id="@+id/receipt_mid4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/tumbler_receipt_middle"
+        android:layout_marginTop="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearLayout6"
-        android:layout_marginTop="10dp"/>
+        app:srcCompat="@mipmap/tumbler_receipt_middle" />
 
     <LinearLayout
         android:id="@+id/linearLayout77"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="65dp"
         android:orientation="vertical"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="@id/receipt_mid4"
-        android:layout_marginRight="65dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="30dp">
+        app:layout_constraintTop_toTopOf="@id/receipt_mid4">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -189,20 +192,20 @@
                 android:id="@+id/textview2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#000000"
-                android:textStyle="bold"
-                android:text="결제금액"
                 android:layout_weight="3"
-                android:textAlignment="textStart"/>
+                android:text="결제금액"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/all_price2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#000000"
-                android:textStyle="bold"
                 android:layout_weight="7"
-                android:textAlignment="textEnd"/>
+                android:textAlignment="textEnd"
+                android:textColor="#000000"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </LinearLayout>
