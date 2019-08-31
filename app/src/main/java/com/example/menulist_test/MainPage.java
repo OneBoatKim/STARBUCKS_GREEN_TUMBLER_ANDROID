@@ -28,17 +28,25 @@ public class MainPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         MyApplication myApplication = (MyApplication)getApplication();
-        myApplication.setServerUrl("52.68.20.62"); //10.149.179.91:8088 희재 서버 // 52.68.20.62 실제 서버
-        myApplication.setAccountId("hanbe");
-        String a;
+        myApplication.setServerUrl("10.149.179.91:8088"); //10.149.179.91:8088 희재 서버 // 52.68.20.62 실제 서버
+        myApplication.setAccountId("heejae");
 
         try {
             String token = FirebaseInstanceId.getInstance().getToken();
             System.out.println(token);
-            Log.d("IDService","device token : "+token);
-        } catch (NullPointerException e) {
+            Log.e("exception","device token : "+token);
+            //로그 서버 통신
+            String url = "http://"+myApplication.getServerUrl()+"/greenTumblerServer/mobile/main/updateFCM";
+            ContentValues contentValues = new ContentValues();
+            contentValues.put("account_id", myApplication.getAccountId());
+            contentValues.put("fcm_token", token);
+            TokenTask networkTask = new TokenTask(url,contentValues);
+            networkTask.execute();
+        } catch (Exception e) {
+            Log.e("exception", e.toString());
             e.printStackTrace();
         }
+
         setContentView(R.layout.activity_main_page);
 
         txt_nickname = (TextView)findViewById(R.id.main_txt_nickname);
@@ -104,6 +112,42 @@ public class MainPage extends AppCompatActivity {
             }catch (Exception e){
                 e.printStackTrace();
             }
+
+        }
+    }
+
+
+    public class TokenTask extends AsyncTask<Void, Void, String> {
+
+        String url;
+        ContentValues values;
+
+        TokenTask(String url, ContentValues values){
+            this.url = url;
+            this.values = values;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            //progress bar를 보여주는 등등의 행위
+        }
+
+        @Override
+        protected String doInBackground(Void... params) {
+            String result;
+            RequestHttpURLConnection requestHttpURLConnection = new RequestHttpURLConnection();
+            result = requestHttpURLConnection.request(url, values);
+            return result; // 결과가 여기에 담깁니다. 아래 onPostExecute()의 파라미터로 전달됩니다.
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            // 통신이 완료되면 호출됩니다.
+            // 결과에 따른 UI 수정 등은 여기서 합니다.
+
+            //Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
+
 
         }
     }

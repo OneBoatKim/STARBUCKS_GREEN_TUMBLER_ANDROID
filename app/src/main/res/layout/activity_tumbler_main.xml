@@ -9,25 +9,29 @@
 
     <Button
         android:id="@+id/tumbler_main_btn_money_add"
-        android:layout_width="189dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="165dp"
+        android:layout_height="42dp"
         android:background="#00FFFFFF"
         android:onClick="go_to_addmoney"
-        app:layout_constraintBottom_toTopOf="@+id/tumbler_main_btn_nfc"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.851" />
 
     <Button
         android:id="@+id/tumbler_main_btn_lost"
-        android:layout_width="183dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="174dp"
+        android:layout_height="42dp"
         android:background="#00FFFFFF"
         android:onClick="go_to_lost"
-        app:layout_constraintBottom_toTopOf="@+id/tumbler_main_btn_nfc"
-        app:layout_constraintStart_toEndOf="@+id/tumbler_main_btn_money_add" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.89"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.851" />
 
     <Button
         android:id="@+id/tumbler_main_btn_greenseed"
@@ -44,8 +48,6 @@
         android:id="@+id/tumbler_main_btn_nfc"
         android:layout_width="359dp"
         android:layout_height="52dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginBottom="24dp"
         android:background="#00FFFFFF"
         android:onClick="go_to_nfc"
@@ -101,27 +103,28 @@
         android:id="@+id/tumbler_main_btn_go_personal"
         android:layout_width="179dp"
         android:layout_height="42dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="8dp"
         android:background="#00FFFFFF"
         android:onClick="go_to_personal"
         android:textColor="#00FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/tumbler_main_btn_money_add"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.77" />
 
     <Button
         android:id="@+id/tumbler_main_btn_go_alarm"
         android:layout_width="180dp"
         android:layout_height="45dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:background="#00FFFFFF"
         android:onClick="go_to_alarm"
-        app:layout_constraintBottom_toTopOf="@+id/tumbler_main_btn_lost"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/tumbler_main_btn_go_personal" />
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.774" />
 
     <Button
         android:id="@+id/tumbler_main_btn_go_to_new"

@@ -91,6 +91,12 @@ public class Tumbler_lost extends AppCompatActivity {
 
             //Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
 
+            if(result.equals("1")){
+                Toast.makeText(getApplicationContext(), "분실신고가 되었습니다.", Toast.LENGTH_LONG).show();
+            }else{
+                Toast.makeText(getApplicationContext(), "잘못된 접근입니다.", Toast.LENGTH_LONG).show();
+            }
+
         }
     }
 }

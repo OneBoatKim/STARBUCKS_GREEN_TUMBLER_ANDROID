@@ -1,11 +1,13 @@
 package com.example.menulist_test;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.app.PendingIntent;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.media.AudioManager;
@@ -94,6 +96,7 @@ public class Tumbler_newTumbler extends AppCompatActivity {
         networkTask.execute();
         Intent intent = new Intent(Tumbler_newTumbler.this, Tumbler_main.class);
         startActivity(intent);
+
         finish();
     }
 
@@ -128,10 +131,13 @@ public class Tumbler_newTumbler extends AppCompatActivity {
             // 결과에 따른 UI 수정 등은 여기서 합니다.
 
             //Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
-            try{
-            }catch (Exception e){
-                e.printStackTrace();
+
+            if(result.equals("1")){
+                Toast.makeText(getApplicationContext(), "텀블러가 등록되었습니다.", Toast.LENGTH_LONG).show();
+            }else{
+                Toast.makeText(getApplicationContext(), "잘못된 입력입니다.", Toast.LENGTH_LONG).show();
             }
+
 
         }
     }
