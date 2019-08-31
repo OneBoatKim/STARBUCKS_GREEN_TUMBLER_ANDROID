@@ -139,9 +139,9 @@ public class Tumbler_receipt extends AppCompatActivity {
 
     public class RowDataViewHolder {
 
-        TextView menunameHolder;
-        TextView menupriceHolder;
-        TextView menucntHolder;
+        TextView menu_nameHolder;
+        TextView menu_priceHolder;
+        TextView menu_cntHolder;
         TextView shot_cnt;
         TextView syrup_cnt;
         TextView whip_cream_chk;
@@ -182,9 +182,9 @@ public class Tumbler_receipt extends AppCompatActivity {
                 convertView = lnf.inflate(R.layout.receipt_menu_listview, parent, false);
                 viewHolder = new RowDataViewHolder();
 
-                viewHolder.menunameHolder = (TextView) convertView.findViewById(R.id.menu_name);
-                viewHolder.menucntHolder = (TextView) convertView.findViewById(R.id.menu_cnt);
-                viewHolder.menupriceHolder = (TextView) convertView.findViewById(R.id.menu_price);
+                viewHolder.menu_nameHolder = (TextView) convertView.findViewById(R.id.menu_name);
+                viewHolder.menu_cntHolder = (TextView) convertView.findViewById(R.id.menu_cnt);
+                viewHolder.menu_priceHolder = (TextView) convertView.findViewById(R.id.menu_price);
 
                 viewHolder.p_optionHolder = (TextView) convertView.findViewById(R.id.personal_option);
 
@@ -194,37 +194,55 @@ public class Tumbler_receipt extends AppCompatActivity {
                 viewHolder = (RowDataViewHolder) convertView.getTag();
             }
 //            Log.v("syrup_cnt", String.valueOf(viewHolder.shot_cnt.getText()));
+//            System.out.println(viewHolder.toString());
 
-            System.out.println(viewHolder.toString());
+            viewHolder.menu_nameHolder.setText(arr.get(position).menu_name);
+            viewHolder.menu_cntHolder.setText(arr.get(position).menu_cnt);
+            viewHolder.menu_priceHolder.setText(arr.get(position).menu_price);
+
+
             String msg = "";
+            int personal_chk = 0;
 
             // 샷이나 시럽같은것을 추가하면 어떤 품목을 얼마나 추가했는지 보여준다.
-            if(String.valueOf(viewHolder.shot_cnt.getText()).equals("0")){
+            if(String.valueOf(arr.get(position).shot).equals("0")){
 
             }else{
-                msg += "\n샷";
+                msg += "샷";
+                msg += "\t\t\t\t\t\t\t\t\t\t";
                 msg += arr.get(position).shot;
+                personal_chk += Integer.parseInt(arr.get(position).shot);
             }
 
-            if(String.valueOf(viewHolder.syrup_cnt.getText()).equals("0")){
+            if(String.valueOf(arr.get(position).syrup).equals("0")){
 
             }else{
                 msg += "\n시럽";
+                msg += "\t\t\t\t\t\t\t\t\t\t";
                 msg += arr.get(position).syrup;
+                personal_chk += Integer.parseInt(arr.get(position).syrup);
             }
 
-            if(String.valueOf(viewHolder.whip_cream_chk.getText()).equals("0")){
+            if(String.valueOf(arr.get(position).whipped_cream).equals("false")){
 
             }else{
                 msg += "\n휘핑";
-                msg += arr.get(position).whipped_cream;
+                msg += "\t\t\t\t\t\t\t\t\t\t";
+                personal_chk += 1;
             }
 
-            if(String.valueOf(viewHolder.drizzle_chk.getText()).equals("0")){
+            if(String.valueOf(arr.get(position).drizzle).equals("false")){
 
             }else{
                 msg += "\n드리즐";
-                msg += arr.get(position).drizzle;
+                msg += "\t\t\t\t\t\t\t\t\t\t";
+                personal_chk += 1;
+            }
+
+            if(personal_chk != 0) {
+                msg += "\n퍼스널 옵션 합계";
+                msg += "\t\t\t\t\t\t\t\t\t\t";
+                msg += String.valueOf(600 * personal_chk);
             }
 
             viewHolder.p_optionHolder.setText(msg);
