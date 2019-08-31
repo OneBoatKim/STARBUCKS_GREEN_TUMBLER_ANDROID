@@ -9,17 +9,15 @@
 
     <Button
         android:id="@+id/tumbler_lost_btn_lost"
-        android:layout_width="390dp"
-        android:layout_height="66dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="19dp"
-        android:layout_marginBottom="228dp"
+        android:layout_width="383dp"
+        android:layout_height="49dp"
         android:background="#00FFFFFF"
         android:onClick="tumbler_lost_DB"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.785"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.552" />
 
     <ImageView
         android:id="@+id/tumbler_lost_img"
@@ -36,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="100dp"
         android:text="텀블러 이름"
         android:textColor="#000000"
         app:layout_constraintStart_toEndOf="@+id/tumbler_lost_img"

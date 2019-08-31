@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="40dp"
         android:text="1"
         android:textColor="#000000"
         app:layout_constraintStart_toEndOf="@+id/tumbler_addmoney_image"
@@ -45,95 +45,104 @@
         android:id="@+id/tumbler_addmoney_txt_tumbler_money_after"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="24dp"
         android:text="텀블러 충전 후 금액"
         android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/tumbler_addmoney_btn_charge"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.915"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.711" />
 
     <Button
         android:id="@+id/tumbler_addmoney_btn_charge"
         android:layout_width="381dp"
         android:layout_height="62dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="44dp"
         android:background="#00FFFFFF"
         android:onClick="charge_money"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.817" />
 
     <Button
         android:id="@+id/tumbler_addmoney_btn_1won"
-        android:layout_width="120dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="72dp"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:background="#00FFFFFF"
         android:onClick="click_1won"
-        android:text="1만원"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tumbler_addmoney_image" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.308" />
 
     <Button
         android:id="@+id/tumbler_addmoney_btn_3won"
-        android:layout_width="114dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="84dp"
+        android:layout_width="120dp"
+        android:layout_height="42dp"
+        android:background="#00FFFFFF"
         android:onClick="click_3won"
-        android:text="3만원"
-        app:layout_constraintStart_toEndOf="@+id/tumbler_addmoney_btn_1won"
-        app:layout_constraintTop_toBottomOf="@+id/tumbler_addmoney_txt_tumbler_money_now" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.309" />
 
     <Button
         android:id="@+id/tumbler_addmoney_btn_5won"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="131dp"
+        android:layout_height="39dp"
+        android:background="#00FFFFFF"
         android:onClick="click_5won"
-        android:text="5만원"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toEndOf="@+id/tumbler_addmoney_btn_3won"
-        app:layout_constraintTop_toBottomOf="@+id/tumbler_addmoney_txt_tumbler_money_now" />
+        app:layout_constraintHorizontal_bias="0.959"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.309" />
 
     <Button
         android:id="@+id/tumbler_addmoney_btn_7won"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_width="119dp"
+        android:layout_height="38dp"
+        android:background="#00FFFFFF"
         android:onClick="click_7won"
-        android:text="7만원"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tumbler_addmoney_btn_1won" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.367" />
 
     <Button
         android:id="@+id/tumbler_addmoney_btn_10won"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
+        android:layout_width="127dp"
+        android:layout_height="36dp"
+        android:background="#00FFFFFF"
         android:onClick="click_10won"
-        android:text="10만원"
-        app:layout_constraintStart_toEndOf="@+id/tumbler_addmoney_btn_7won"
-        app:layout_constraintTop_toBottomOf="@+id/tumbler_addmoney_btn_3won" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.369" />
 
     <Button
         android:id="@+id/tumbler_addmoney_btn_20won"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:background="#00FFFFFF"
         android:onClick="click_20won"
-        android:text="20만원"
-        app:layout_constraintStart_toEndOf="@+id/tumbler_addmoney_btn_10won"
-        app:layout_constraintTop_toBottomOf="@+id/tumbler_addmoney_btn_5won" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.369" />
 
     <Button
         android:id="@+id/tumbler_addmoney_btn_go_back"

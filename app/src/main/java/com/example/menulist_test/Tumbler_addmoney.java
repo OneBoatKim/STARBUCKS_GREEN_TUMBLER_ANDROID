@@ -92,7 +92,7 @@ public class Tumbler_addmoney extends AppCompatActivity {
         txt_tmoney_after.setText(String.valueOf(tmoney_after) + "원");
     }
     public void click_20won(View v) {
-        tmoney_charge = 200000;
+        tmoney_charge = 150000;
         tmoney_after = tmoney_now + tmoney_charge;
         txt_tmoney_after.setText(String.valueOf(tmoney_after) + "원");
     }

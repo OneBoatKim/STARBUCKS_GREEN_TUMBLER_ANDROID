@@ -54,7 +54,7 @@
         android:id="@+id/main_txt_tumbler_money"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="24dp"
         android:text="0원"
         android:textAlignment="center"
         android:textColor="#FFFFFF"

@@ -13,73 +13,82 @@
         android:background="@mipmap/personal_option_page_bg"
         android:visibility="invisible">
 
+        <TextView
+            android:id="@+id/p_add_menuname2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.115" />
+
         <Button
             android:id="@+id/p_add_btn_change_op"
             android:layout_width="187dp"
             android:layout_height="50dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="244dp"
-            android:layout_marginEnd="8dp"
-            android:background="#00000000"
+            android:background="#00FFFFFF"
             android:onClick="go_register_layout"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.961"
+            app:layout_constraintHorizontal_bias="0.928"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/drizzle_checkBox" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.728" />
 
         <CheckBox
             android:id="@+id/drizzle_checkBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="68dp"
-            android:layout_marginEnd="16dp"
-            android:background="#B69797"
+            android:background="#D7D2CB"
             android:onClick="drizzle_checked"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.921"
-            app:layout_constraintStart_toEndOf="@+id/p_add_text_drizzle"
-            app:layout_constraintTop_toBottomOf="@+id/whip_checkBox" />
+            app:layout_constraintHorizontal_bias="0.92"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.575" />
 
         <CheckBox
             android:id="@+id/whip_checkBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="68dp"
-            android:layout_marginEnd="16dp"
-            android:background="#B69797"
+            android:background="#D7D2CB"
             android:onClick="whip_checked"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.917"
-            app:layout_constraintStart_toEndOf="@+id/p_add_text_whip"
-            app:layout_constraintTop_toBottomOf="@+id/syrub_spinner" />
+            app:layout_constraintHorizontal_bias="0.92"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.47" />
 
         <Spinner
             android:id="@+id/syrub_spinner"
-            android:layout_width="69dp"
-            android:layout_height="29dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="8dp"
-            android:background="#000000"
+            android:layout_width="47dp"
+            android:layout_height="26dp"
+            android:alwaysDrawnWithCache="false"
+            android:background="@mipmap/spinner2"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.969"
-            app:layout_constraintStart_toEndOf="@+id/p_add_text_syrub"
-            app:layout_constraintTop_toBottomOf="@+id/shot_spinner" />
+            app:layout_constraintHorizontal_bias="0.92"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.37" />
 
         <Spinner
             android:id="@+id/shot_spinner"
-            android:layout_width="69dp"
-            android:layout_height="29dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="100dp"
-            android:layout_marginEnd="8dp"
-            android:background="#000000"
+            android:layout_width="47dp"
+            android:layout_height="26dp"
+            android:background="@mipmap/spinner1"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.971"
-            app:layout_constraintStart_toEndOf="@+id/p_add_text_shot"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintHorizontal_bias="0.92"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.259" />
 
         <Button
             android:id="@+id/p_add_btn_close_op"
@@ -94,45 +103,53 @@
             android:id="@+id/p_add_text_drizzle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="80dp"
             android:text="드리즐"
             android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.096"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/p_add_text_whip" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.573" />
 
         <TextView
             android:id="@+id/p_add_text_whip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="72dp"
             android:text="휘핑크림"
             android:textColor="#050000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/p_add_text_syrub" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.471" />
 
         <TextView
             android:id="@+id/p_add_text_syrub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="68dp"
             android:text="시럽"
             android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.093"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/p_add_text_shot" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.375" />
 
         <TextView
             android:id="@+id/p_add_text_shot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="64dp"
             android:text="샷"
             android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.09"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/p_add_btn_close_op" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.265" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -157,7 +174,6 @@
             android:onClick="p_add_data_to_db"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button

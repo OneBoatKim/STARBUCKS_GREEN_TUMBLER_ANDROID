@@ -38,6 +38,7 @@ public class Personal_add extends AppCompatActivity {
     TextView mid_text;
     TextView mname_text;
     TextView size_text;
+    TextView mname_text2;
     String img_url;
     Personal_data p_data;
     ConstraintLayout constraintLayout1;
@@ -62,6 +63,7 @@ public class Personal_add extends AppCompatActivity {
         size_text = (TextView)findViewById(R.id.p_add_size);
         whip_box = (CheckBox)findViewById(R.id.whip_checkBox) ;
         drizzle_box = (CheckBox)findViewById(R.id.drizzle_checkBox);
+        mname_text2 = (TextView)findViewById(R.id.p_add_menuname2);
 
         arrayList = new ArrayList<>();
         arrayList.add("0");
@@ -226,6 +228,7 @@ public class Personal_add extends AppCompatActivity {
                 JSONObject jsonObject = new JSONObject(result);
                 img_url = jsonObject.getString("image");
                 mname_text.setText(jsonObject.getString("menu_name"));
+                mname_text2.setText(jsonObject.getString("menu_name"));
                 System.out.println(img_url);
 
                 Picasso.with(getBaseContext())
