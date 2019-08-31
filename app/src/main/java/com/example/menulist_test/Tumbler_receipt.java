@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,12 +20,13 @@ import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
 
 
-public class TumblerReceiptActivity extends AppCompatActivity {
+public class Tumbler_receipt extends AppCompatActivity {
 
     TextView account_id;
     TextView order_time;
@@ -65,7 +67,6 @@ public class TumblerReceiptActivity extends AppCompatActivity {
         ReceiptTask networkTask = new ReceiptTask(url, null);
         networkTask.execute();
         adapter.notifyDataSetChanged();
-
     }
 
 
@@ -125,8 +126,7 @@ public class TumblerReceiptActivity extends AppCompatActivity {
                             jsonObjectOrderList.getString("price"),
                             jsonObjectOrderList.getString("menu_name")
                     ));
-                    System.out.println(jsonObjectOrderList);
-
+//                    System.out.println(jsonObjectOrderList);
 //                    Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
                     adapter.notifyDataSetChanged();
                 }
@@ -139,18 +139,15 @@ public class TumblerReceiptActivity extends AppCompatActivity {
 
     public class RowDataViewHolder {
 
-        public TextView menu_name;
-        public TextView size;
-        public TextView menu_price;
-        public TextView menu_cnt;
-        public TextView shot_cnt;
-        public TextView syrup_cnt;
-        public TextView whip_cream_chk;
-        public TextView drizzle_chk;
-        public TextView personal_option_yn;
-        public TextView personal_option_sum;
+        TextView menu_nameHolder;
+        TextView menu_priceHolder;
+        TextView menu_cntHolder;
+        TextView shot_cnt;
+        TextView syrup_cnt;
+        TextView whip_cream_chk;
+        TextView drizzle_chk;
+        TextView p_optionHolder;
     }
-
 
     class tumbler_receipt_adapter extends ArrayAdapter {
 
@@ -185,32 +182,70 @@ public class TumblerReceiptActivity extends AppCompatActivity {
                 convertView = lnf.inflate(R.layout.receipt_menu_listview, parent, false);
                 viewHolder = new RowDataViewHolder();
 
-                viewHolder.menu_name = (TextView) convertView.findViewById(R.id.menu_name);
-                viewHolder.menu_cnt = (TextView) convertView.findViewById(R.id.menu_cnt);
-                viewHolder.menu_price = (TextView) convertView.findViewById(R.id.menu_price);
+                viewHolder.menu_nameHolder = (TextView) convertView.findViewById(R.id.menu_name);
+                viewHolder.menu_cntHolder = (TextView) convertView.findViewById(R.id.menu_cnt);
+                viewHolder.menu_priceHolder = (TextView) convertView.findViewById(R.id.menu_price);
 
-                viewHolder.personal_option_yn = (TextView) convertView.findViewById(R.id.personal_option_yn);
-                viewHolder.shot_cnt = (TextView) convertView.findViewById(R.id.shot_cnt);
-                viewHolder.syrup_cnt = (TextView) convertView.findViewById(R.id.syrup_cnt);
-                viewHolder.whip_cream_chk = (TextView) convertView.findViewById(R.id.whip_cream_chk);
-                viewHolder.drizzle_chk = (TextView) convertView.findViewById(R.id.drizzle_chk);
-                viewHolder.personal_option_sum = (TextView) convertView.findViewById(R.id.personal_option_sum);
+                viewHolder.p_optionHolder = (TextView) convertView.findViewById(R.id.personal_option);
 
                 convertView.setTag(viewHolder);
+
             } else {
                 viewHolder = (RowDataViewHolder) convertView.getTag();
             }
+//            Log.v("syrup_cnt", String.valueOf(viewHolder.shot_cnt.getText()));
+//            System.out.println(viewHolder.toString());
 
-            viewHolder.menu_name.setText(arr.get(position).menu_name);
-            viewHolder.menu_cnt.setText(arr.get(position).menu_cnt);
-            viewHolder.menu_price.setText(arr.get(position).menu_price);
-            viewHolder.personal_option_yn.setText(arr.get(position).private_menu_yn);
-            viewHolder.shot_cnt.setText(arr.get(position).shot);
-            viewHolder.syrup_cnt.setText(arr.get(position).syrup);
-            viewHolder.whip_cream_chk.setText(arr.get(position).whipped_cream);
-            viewHolder.drizzle_chk.setText(arr.get(position).drizzle);
-            viewHolder.personal_option_sum.setText(arr.get(position).option_sum);
+            viewHolder.menu_nameHolder.setText(arr.get(position).menu_name);
+            viewHolder.menu_cntHolder.setText(arr.get(position).menu_cnt);
+            viewHolder.menu_priceHolder.setText(arr.get(position).menu_price);
 
+
+            String msg = "";
+            int personal_chk = 0;
+
+            // 샷이나 시럽같은것을 추가하면 어떤 품목을 얼마나 추가했는지 보여준다.
+            if(String.valueOf(arr.get(position).shot).equals("0")){
+
+            }else{
+                msg += "샷";
+                msg += "\t\t\t\t\t\t\t\t\t\t";
+                msg += arr.get(position).shot;
+                personal_chk += Integer.parseInt(arr.get(position).shot);
+            }
+
+            if(String.valueOf(arr.get(position).syrup).equals("0")){
+
+            }else{
+                msg += "\n시럽";
+                msg += "\t\t\t\t\t\t\t\t\t\t";
+                msg += arr.get(position).syrup;
+                personal_chk += Integer.parseInt(arr.get(position).syrup);
+            }
+
+            if(String.valueOf(arr.get(position).whipped_cream).equals("false")){
+
+            }else{
+                msg += "\n휘핑";
+                msg += "\t\t\t\t\t\t\t\t\t\t";
+                personal_chk += 1;
+            }
+
+            if(String.valueOf(arr.get(position).drizzle).equals("false")){
+
+            }else{
+                msg += "\n드리즐";
+                msg += "\t\t\t\t\t\t\t\t\t\t";
+                personal_chk += 1;
+            }
+
+            if(personal_chk != 0) {
+                msg += "\n퍼스널 옵션 합계";
+                msg += "\t\t\t\t\t\t\t\t\t\t";
+                msg += String.valueOf(600 * personal_chk);
+            }
+
+            viewHolder.p_optionHolder.setText(msg);
 
             return convertView;
         }

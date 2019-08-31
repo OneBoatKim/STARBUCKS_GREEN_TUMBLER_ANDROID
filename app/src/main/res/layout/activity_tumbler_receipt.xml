@@ -4,21 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TumblerReceiptActivity">
+    tools:context=".Tumbler_receipt"
+    android:background="#ffffff">
 
     <ImageView
-        android:id="@+id/receipt"
-        android:layout_width="wrap_content"
+        android:id="@+id/receipt_top"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/tumbler_receipt2"
+        app:srcCompat="@mipmap/tumbler_receipt_top"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/push_back"
         android:layout_width="50dp"
         android:layout_height="40dp"
-        android:background="#ffffff"
+        android:background="#00FFFFFF"
         android:onClick="go_back"
         android:text="Back"
         android:textColor="#000000"
@@ -30,17 +31,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintLeft_toLeftOf="@id/receipt"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="45dp"
-        android:layout_marginRight="70dp"
-        android:layout_marginTop="100dp">
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/receipt_top"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="65dp"
+        android:layout_marginLeft="60dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginLeft="20dp"
             android:weightSum="10">
 
             <TextView
@@ -49,6 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
                 android:text="남산스테이트점"
+                android:textAlignment="textStart"
                 android:textColor="#000000"/>
 
             <TextView
@@ -56,62 +57,87 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="6"
-                android:text="2019-08-26 17:00:00"
+                android:textAlignment="textEnd"
                 android:textColor="#000000"/>
 
         </LinearLayout>
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/receipt_mid1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/tumbler_receipt_middle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout1"
+        android:layout_marginTop="10dp"/>
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintLeft_toLeftOf="@id/linearLayout1"
-        app:layout_constraintTop_toTopOf="@id/linearLayout1"
-        android:layout_marginLeft="45dp"
-        android:layout_marginRight="70dp"
-        android:layout_marginTop="50dp">
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/receipt_mid1"
+        android:layout_marginRight="65dp"
+        android:layout_marginLeft="60dp">
 
         <TextView
             android:id="@+id/account_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="1"
             android:textColor="#000000"
-            android:textSize="30dp" />
+            android:textSize="30dp"
+            android:textStyle="bold"/>
     </LinearLayout>
 
-<!--메뉴별 금액(리스트뷰)-->
+    <ImageView
+        android:id="@+id/receipt_mid2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/tumbler_receipt_middle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout2"
+        android:layout_marginTop="10dp"/>
 
-    <!-- 합계 -->
-
+    <!--메뉴별 금액(리스트뷰)-->
     <ListView
         android:id="@+id/menuView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        app:layout_constraintLeft_toLeftOf="@id/linearLayout1"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout2" />
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@id/receipt_mid2"
+        android:layout_marginRight="65dp"
+        android:layout_marginLeft="60dp"/>
 
+    <ImageView
+        android:id="@+id/receipt_mid3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/tumbler_receipt_middle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menuView"
+        android:layout_marginTop="10dp"/>
+
+
+    <!-- 합계 -->
     <LinearLayout
         android:id="@+id/linearLayout6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintLeft_toLeftOf="@id/linearLayout1"
-        app:layout_constraintTop_toTopOf="@id/menuView"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="70dp"
-        android:layout_marginTop="80dp">
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/receipt_mid3"
+        android:layout_marginRight="65dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="30dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
             android:weightSum="10">
 
             <TextView
@@ -119,8 +145,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
+                android:textAlignment="textStart"
                 android:text="합계"
-                android:layout_weight="2"/>
+                android:layout_weight="3"/>
 
             <TextView
                 android:id="@+id/all_price1"
@@ -128,29 +155,35 @@
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
                 android:textAlignment="textEnd"
-                android:layout_weight="8"/>
+                android:layout_weight="7"/>
 
         </LinearLayout>
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/receipt_mid4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/tumbler_receipt_middle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout6"
+        android:layout_marginTop="10dp"/>
 
     <LinearLayout
         android:id="@+id/linearLayout77"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintLeft_toLeftOf="@id/linearLayout1"
-        app:layout_constraintTop_toTopOf="@id/linearLayout6"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="70dp"
-        android:layout_marginTop="80dp">
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/receipt_mid4"
+        android:layout_marginRight="65dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="30dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:weightSum="10">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textview2"
@@ -159,7 +192,8 @@
                 android:textColor="#000000"
                 android:textStyle="bold"
                 android:text="결제금액"
-                android:layout_weight="3"/>
+                android:layout_weight="3"
+                android:textAlignment="textStart"/>
 
             <TextView
                 android:id="@+id/all_price2"

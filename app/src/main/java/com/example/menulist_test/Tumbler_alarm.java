@@ -16,9 +16,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -56,7 +53,7 @@ public class Tumbler_alarm extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
                 if(a_arr.get(i).getA_type().equals("pay")){
-                    Intent intent = new Intent(Tumbler_alarm.this, TumblerReceiptActivity.class);
+                    Intent intent = new Intent(Tumbler_alarm.this, Tumbler_receipt.class);
                     intent.putExtra("order_id",a_arr.get(i).getA_orderid());
                     startActivity(intent);
                 }
