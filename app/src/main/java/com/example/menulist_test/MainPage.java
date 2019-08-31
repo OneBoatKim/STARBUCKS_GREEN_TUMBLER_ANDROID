@@ -28,8 +28,8 @@ public class MainPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         MyApplication myApplication = (MyApplication)getApplication();
-//        myApplication.setServerUrl("52.68.20.62");
-        myApplication.setServerUrl("10.149.179.91:8088");   //10.149.179.91:8088 희재 서버 // 52.68.20.62 실제 서버
+        myApplication.setServerUrl("52.68.20.62");
+//        myApplication.setServerUrl("10.149.179.91:8088");   //10.149.179.91:8088 희재 서버 // 52.68.20.62 실제 서버
         myApplication.setAccountId("sanghyeon");
 
         try {

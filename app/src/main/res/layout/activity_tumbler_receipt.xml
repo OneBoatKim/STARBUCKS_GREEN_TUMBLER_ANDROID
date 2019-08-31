@@ -16,18 +16,24 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/tumbler_receipt_top" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/receipt_back_btn" />
+
     <Button
         android:id="@+id/push_back"
-        android:layout_width="50dp"
+        android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="8dp"
         android:background="#00FFFFFF"
         android:onClick="go_back"
-        android:text="Back"
         android:textColor="#000000"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintLeft_toLeftOf="@id/imageView"
+        app:layout_constraintTop_toTopOf="@id/imageView" />
 
     <LinearLayout
         android:id="@+id/linearLayout1"
